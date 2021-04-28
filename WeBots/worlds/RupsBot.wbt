@@ -1,0 +1,19 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.07031671295485387 0.9652396306110459 0.2517300446452037 3.6441988558298046
+  position -0.9180851696790748 1.1574079533337784 -1.7441583150917888
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorTileSize 0.25 0.25
+  wallHeight 0.05
+}
+SurveyorSrv1 {
+  controller "RupsbandController"
+}
