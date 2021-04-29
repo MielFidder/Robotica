@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="sani.png">
+    <title>SaniBot</title>
+	
+	
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+	<link href="style.css" rel="stylesheet">
+	 
+	 <style>
+		#demo {
+		height:100%;
+		position:relative;
+		overflow:hidden;
+		}
+
+
+		.green{
+		background-color:#6fb936;
+		}
+		.thumb{
+		margin-bottom: 30px;
+		}
+
+		.page-top{
+		margin-top:85px;
+		}
+
+
+		img.zoom {
+		width: 100%;
+		height: 200px;
+		border-radius:5px;
+		object-fit:cover;
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		-ms-transition: all .3s ease-in-out;
+		}
+
+
+		.transition {
+		-webkit-transform: scale(1.2); 
+		-moz-transform: scale(1.2);
+		-o-transform: scale(1.2);
+		transform: scale(1.2);
+		}
+		.modal-header {
+
+		border-bottom: none;
+		}
+		.modal-title {
+		color:#000;
+		}
+		.modal-footer{
+		display:none;  
+		}
+	 </style>
+  </head>
+
+  <body class="text-center">
+
+    <div class="container-md d-flex h-100 p-3 mx-auto flex-column">
+		<header class="masthead mb-auto">
+			<div class="inner">
+				<h3><a class="masthead-brand" href="/">SaniBot</a></h3>
+			  <nav class="nav nav-masthead justify-content-center">
+				<a class="nav-link" href="/voortgang.html">Voortgang</a>
+				<a class="nav-link" href="/galerij.html">Galerij</a>
+				<a class="nav-link" href="/over-ons.html">Over Ons</a>
+				<a class="nav-link" href="/countdown.html">Countdown</a>
+			  </nav>
+			</div>
+		</header>
+		<div class="container-md">
+			<div class="row">
+				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+					<a href="topdown.png" class="fancybox" rel="ligthbox">
+						<img src="topdown.png" class="zoom img-fluid "  alt="">
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+					<a href="rupsbanden.png" class="fancybox" rel="ligthbox">
+						<img src="rupsbanden.png" class="zoom img-fluid "  alt="">
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+					<a href="arm.png" class="fancybox" rel="ligthbox">
+						<img src="arm.png" class="zoom img-fluid "  alt="">
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+					<a href="claw.png" class="fancybox" rel="ligthbox">
+						<img src="claw.png" class="zoom img-fluid "  alt="">
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+					<a href="sani.png" class="fancybox" rel="ligthbox">
+						<img src="sani.png" class="zoom img-fluid "  alt="">
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+					<a href="schets.png" class="fancybox" rel="ligthbox">
+						<img src="schets.png" class="zoom img-fluid "  alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+		  $(".fancybox").fancybox({
+				openEffect: "none",
+				closeEffect: "none"
+			});
+			
+			$(".zoom").hover(function(){
+				$(this).addClass('transition');
+			}, function(){
+				$(this).removeClass('transition');
+			});
+		});
+	</script>
+
+
+  </body>
+</html>
