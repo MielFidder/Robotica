@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="sani.png">
+    <title>SaniBot</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center" id="body">
+    <div class="container-md d-flex h-100 p-3 mx-auto flex-column">
+		<header class="masthead mb-auto">
+			<div class="inner">
+				<h3><a class="masthead-brand" href="/">SaniBot</a></h3>
+			  <nav class="nav nav-masthead justify-content-center">
+				<a class="nav-link" href="/voortgang.html">Voortgang</a>
+				<a class="nav-link" href="/galerij.html">Galerij</a>
+				<a class="nav-link" href="/over-ons.html">Over Ons</a>
+				<a class="nav-link" href="/countdown.html">Countdown</a>
+			  </nav>
+			</div>
+		</header>
+
+      <main role="main" class="inner cover">
+        <h1 id="counter" class="cover-heading"></h1>
+      </main>
+		<audio controls id="auto" hidden> 
+			<source src="countdown.ogg" type="audio/ogg"> 
+			<source src="countdown.mp3" type="audio/mpeg"> 
+		</audio> 
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+	<script>
+	document.addEventListener("click", function(){
+
+		var auto = document.getElementById("auto");
+		auto.volume = 0.1;
+		try {
+			auto.play();
+		}
+		catch (exception_var) {
+		}
+	});
+
+	window.addEventListener('DOMContentLoaded', function () {
+
+		var countDownDate = new Date("Jun 24, 2021 00:00:00").getTime();
+
+		var x = setInterval(function() {
+
+		  var now = new Date().getTime();
+			
+		  var distance = countDownDate - now;
+			
+		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			
+		  document.getElementById("counter").innerHTML = days + "d " + hours + "h "
+		  + minutes + "m " + seconds + "s ";
+			
+		  if (distance < 0) {
+			clearInterval(x);
+			document.getElementById("counter").innerHTML = "EXPIRED";
+		  }
+		}, 1000);
+		
+		
+		var body = document.getElementById("body");
+		body.click();
+	});
+	</script>
+  </body>
+</html>
