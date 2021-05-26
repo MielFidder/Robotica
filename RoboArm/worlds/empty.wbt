@@ -1,0 +1,20 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.5096025049821018 0.8379103494433271 0.19547770515260396 0.9504668570833383
+  position 2.5585651395408204 2.444635967706558 2.349490395295205
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorTileSize 0.25 0.25
+  wallHeight 0.05
+}
+P-Rob3 {
+  rotation 1 0 0 -1.5707953071795862
+  controller "ArmController"
+}
