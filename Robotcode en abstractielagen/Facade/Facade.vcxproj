@@ -142,6 +142,7 @@
     <ClCompile Include="ArmController.cpp" />
     <ClCompile Include="detectController.cpp" />
     <ClCompile Include="Distancesensor.cpp" />
+    <ClCompile Include="Facade.cpp" />
     <ClCompile Include="Joystick.cpp" />
     <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="Motor.cpp" />
@@ -160,6 +161,7 @@
     <ClInclude Include="Device.hpp" />
     <ClInclude Include="DistanceSensor.hpp" />
     <ClInclude Include="distance_sensor.h" />
+    <ClInclude Include="Facade.hpp" />
     <ClInclude Include="Joystick.h" />
     <ClInclude Include="Joystick.hpp" />
     <ClInclude Include="keyboard.h" />

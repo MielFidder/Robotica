@@ -1,11 +1,3 @@
-#include "Types.h"
-#include "Device.hpp"
-#include "Motor.hpp"
-#include "Joystick.hpp"
-#include "Robot.hpp"
-#include "DistanceSensor.hpp"
-#include "Keyboard.hpp"
-#include <iostream>
 namespace webots {
 	class WebotsController {
 	protected:
