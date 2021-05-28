@@ -45,6 +45,9 @@
     <ClCompile Include="Facade.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Text meegeven.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Robot.hpp">

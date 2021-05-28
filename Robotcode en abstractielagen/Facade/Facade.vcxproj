@@ -148,6 +148,7 @@
     <ClCompile Include="Motor.cpp" />
     <ClCompile Include="Robot.cpp" />
     <ClCompile Include="RupsbandController.cpp" />
+    <ClCompile Include="Text meegeven.cpp" />
     <ClCompile Include="WebotsController.cpp" />
   </ItemGroup>
   <ItemGroup>

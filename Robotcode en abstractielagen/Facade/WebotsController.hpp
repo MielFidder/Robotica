@@ -1,3 +1,10 @@
+#include "Types.h"
+#include "Device.hpp"
+#include "Motor.hpp"
+#include "Joystick.hpp"
+#include "Robot.hpp"
+#include "DistanceSensor.hpp"
+#include "Keyboard.hpp"
 namespace webots {
 	class WebotsController {
 	protected:
@@ -29,5 +36,6 @@ namespace webots {
 		void initdetect();
 		void SetWheelVelocity(double right, double left);
 		int JoystickOperation(int axis);
+		void GeeftTextWeer(std::string text);
 	};
 }

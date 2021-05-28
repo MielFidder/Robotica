@@ -1,4 +1,4 @@
-#include "WebotsController.hpp"
+#include "Facade.hpp"
 
 //define key codes
 
@@ -34,7 +34,7 @@ void JoystickControls() {
     std::cout << "R: " << r << std::endl;
 
 
-    controller->WheelVelocity(r, l);
+    controller->SetWheelVelocity(r, l);
 }
 
 void KeyPres() {

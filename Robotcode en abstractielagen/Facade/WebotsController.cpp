@@ -14,6 +14,7 @@
 #include "DistanceSensor.hpp"
 #include "Keyboard.hpp"
 #include "WebotsController.hpp"
+#include <iostream>
 
 using namespace webots;
 
@@ -191,5 +192,8 @@ void WebotsController::SetWheelVelocity(double right, double left) {
 }
 int WebotsController::JoystickOperation(int axis) {
     joystick_->getAxisValue(axis);
+}
+void WebotsController::GeeftTextWeer(std::string text) {
+    std::cout << text << std::endl;
 }
 
