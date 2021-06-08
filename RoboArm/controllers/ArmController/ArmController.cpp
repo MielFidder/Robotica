@@ -52,9 +52,9 @@ int main(int argc, char **argv) {
     //std::cout<< "y: "<< stick2Ypower <<std::endl;
     //std::cout<< "x: "<< stick2Xpower <<std::endl;
     
-    std::cout<< "x: "<< motor[6]->getTorqueFeedback() <<std::endl;
+    //std::cout<< "x: "<< motor[6]->getTorqueFeedback() <<std::endl;
    
-    
+   //Check voor als de stick niet aangeraakt wordt 
     if(stickYpower < 1.2 && stickYpower > -1.2)
       motor[4]->setVelocity(0.0);
     else

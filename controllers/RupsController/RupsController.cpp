@@ -10,6 +10,8 @@
 // All the webots classes are defined in the "webots" namespace
 using namespace webots;
 
+bool danceMode = false;
+
 void Dance(){
    std::cout<<"Dance"<<std::endl;
 }
@@ -36,28 +38,32 @@ for(int i = 0; i < 10; i++){
 }
 
  while (robot->step(TIME_STEP) != -1){
-   Dance();
-   int stickX = joystick.getAxisValue(1);
-   int stickY = joystick.getAxisValue(0);
-  
-   int stickYinv = (0-stickY)/SPEEDMULT;
-   int stickXinv = (0-stickX)/SPEEDMULT;
-
-   int v = (100 - abs(stickXinv)) * (stickYinv/100) + stickYinv;
-   int w = (100 - abs(stickYinv)) * (stickXinv/100) + stickXinv;
    
-   int l = (v-w)/2;
-   int r = (v+w)/2;
-
-   //std::cout<<"L: " <<l<<std::endl;
-   //std::cout<<"R: " <<r<<std::endl;
-   
+   if(danceMode == true){
+     Dance();
+   }else{
+     int stickX = joystick.getAxisValue(1);
+     int stickY = joystick.getAxisValue(0);
+    
+     int stickYinv = (0-stickY)/SPEEDMULT;
+     int stickXinv = (0-stickX)/SPEEDMULT;
   
-  for(int i = 0; i < 10; i++){
-    if(i < 5)
-      motor[i]->setVelocity(r);
-    else
-      motor[i]->setVelocity(l);
+     int v = (100 - abs(stickXinv)) * (stickYinv/100) + stickYinv;
+     int w = (100 - abs(stickYinv)) * (stickXinv/100) + stickXinv;
+     
+     int l = (v-w)/2;
+     int r = (v+w)/2;
+  
+     //std::cout<<"L: " <<l<<std::endl;
+     //std::cout<<"R: " <<r<<std::endl;
+     
+    
+    for(int i = 0; i < 10; i++){
+      if(i < 5)
+        motor[i]->setVelocity(r);
+      else
+        motor[i]->setVelocity(l);
+     }
    }
  }
 
